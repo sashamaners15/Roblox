@@ -63,4 +63,6 @@ local function FireProximity(arg1,Count)
 
 end
 
+warn(Player)
+
     
