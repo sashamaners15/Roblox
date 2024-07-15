@@ -1,0 +1,66 @@
+local NPCS_FOLDER = workspace.NPCS_FOLDER
+local Player = game:GetService("Players").LocalPlayer
+local Character = nil
+local RootPart
+local Humanoid
+
+local function CharacterAdded(Character)
+	Character = Character
+	
+	task.spawn(function()
+		RootPart = Character:WaitForChild("HumanoidRootPart", 5)
+	end)
+	
+	task.spawn(function()
+		Humanoid = Character:WaitForChild("Humanoid", 5)
+	end)
+end
+
+if Player.Character then
+    CharacterAdded(Player.Character)
+end
+Player.CharacterAdded:Connect(CharacterAdded)
+
+local function Teleport(arg1)
+    local cframe = CFrame.identity
+    local Type = typeof(arg1)
+
+    if Type == "Instance" then
+        if arg1:IsA("Model") then
+            local humanoidRootPart = arg1:FindFirstChild("HumanoidRootPart")
+            if humanoidRootPart then
+                cframe = humanoidRootPart.CFrame
+            else
+                warn("Model does not have a HumanoidRootPart")
+                return
+            end
+        elseif arg1:IsA("Part") then
+            cframe = arg1.CFrame
+        else
+            warn("Unsupported Instance type for Teleport")
+            return
+        end
+    elseif Type == "CFrame" then
+        cframe = arg1
+    else
+        warn("Can't get CFrame for Teleport")
+        return
+    end
+
+    RootPart.CFrame = cframe
+end
+
+
+local function FireProximity(arg1,Count)
+
+    local ProximityPrompt = arg1    
+
+    if arg1.ClassName == "Model" and arg1.Parent == NPCS_FOLDER then
+        ProximityPrompt = arg1.HumanoidRootPart.ProximityAttachment.Interaction
+    end
+
+    fireproximityprompt(ProximityPrompt,Count or 1)
+
+end
+
+    
