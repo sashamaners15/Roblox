@@ -10,13 +10,13 @@
 -- Instances: 112 | Scripts: 1 | Modules: 5 | Tags: 0
 local G2L = {};
 
--- StarterGui.MainUI
+-- SoundService.MainUI
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["Name"] = [[MainUI]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 
 
--- StarterGui.MainUI.Frame
+-- SoundService.MainUI.Frame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BorderSizePixel"] = 0;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(76, 76, 76);
@@ -27,12 +27,12 @@ G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2"]["BackgroundTransparency"] = 0.25;
 
 
--- StarterGui.MainUI.Frame.UICorner
+-- SoundService.MainUI.Frame.UICorner
 G2L["3"] = Instance.new("UICorner", G2L["2"]);
 
 
 
--- StarterGui.MainUI.Frame.UIStroke
+-- SoundService.MainUI.Frame.UIStroke
 G2L["4"] = Instance.new("UIStroke", G2L["2"]);
 G2L["4"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["4"]["LineJoinMode"] = Enum.LineJoinMode.Bevel;
@@ -40,504 +40,504 @@ G2L["4"]["Thickness"] = 2;
 G2L["4"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
--- StarterGui.MainUI.Frame.UIStroke.UIGradient
+-- SoundService.MainUI.Frame.UIStroke.UIGradient
 G2L["5"] = Instance.new("UIGradient", G2L["4"]);
 G2L["5"]["Rotation"] = 90;
 G2L["5"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Frame.UIGradient
+-- SoundService.MainUI.Frame.UIGradient
 G2L["6"] = Instance.new("UIGradient", G2L["2"]);
 G2L["6"]["Rotation"] = 90;
 G2L["6"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Frame.HubTitle
-G2L["7"] = Instance.new("Frame", G2L["2"]);
-G2L["7"]["BorderSizePixel"] = 0;
-G2L["7"]["BackgroundColor3"] = Color3.fromRGB(76, 76, 76);
-G2L["7"]["Size"] = UDim2.new(1.00034, 0, 0.07686, 0);
-G2L["7"]["Position"] = UDim2.new(-0.00034, 0, -0.00154, 0);
-G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7"]["Name"] = [[HubTitle]];
-G2L["7"]["BackgroundTransparency"] = 0.25;
+-- SoundService.MainUI.Frame.UIAspectRatioConstraint
+G2L["7"] = Instance.new("UIAspectRatioConstraint", G2L["2"]);
+G2L["7"]["AspectRatio"] = 1.62114;
 
 
--- StarterGui.MainUI.Frame.HubTitle.UICorner
-G2L["8"] = Instance.new("UICorner", G2L["7"]);
+-- SoundService.MainUI.Frame.Frame
+G2L["8"] = Instance.new("Frame", G2L["2"]);
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(76, 76, 76);
+G2L["8"]["Size"] = UDim2.new(0.2817, 0, 0.88425, 0);
+G2L["8"]["Position"] = UDim2.new(0.01256, 0, 0.09599, 0);
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["BackgroundTransparency"] = 0.25;
 
 
-
--- StarterGui.MainUI.Frame.HubTitle.UIStroke
-G2L["9"] = Instance.new("UIStroke", G2L["7"]);
+-- SoundService.MainUI.Frame.Frame.UIStroke
+G2L["9"] = Instance.new("UIStroke", G2L["8"]);
 G2L["9"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["9"]["LineJoinMode"] = Enum.LineJoinMode.Bevel;
 G2L["9"]["Thickness"] = 2;
 G2L["9"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
--- StarterGui.MainUI.Frame.HubTitle.UIStroke.UIGradient
+-- SoundService.MainUI.Frame.Frame.UIStroke.UIGradient
 G2L["a"] = Instance.new("UIGradient", G2L["9"]);
 G2L["a"]["Rotation"] = 90;
 G2L["a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Frame.HubTitle.UIGradient
-G2L["b"] = Instance.new("UIGradient", G2L["7"]);
+-- SoundService.MainUI.Frame.Frame.UIGradient
+G2L["b"] = Instance.new("UIGradient", G2L["8"]);
 G2L["b"]["Rotation"] = 90;
 G2L["b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Frame.HubTitle.UIScale
-G2L["c"] = Instance.new("UIScale", G2L["7"]);
+-- SoundService.MainUI.Frame.Tabs
+G2L["c"] = Instance.new("Frame", G2L["2"]);
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(76, 76, 76);
+G2L["c"]["Size"] = UDim2.new(0.65901, 0, 0.88164, 0);
+G2L["c"]["Position"] = UDim2.new(0.32436, 0, 0.09599, 0);
+G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Name"] = [[Tabs]];
+G2L["c"]["BackgroundTransparency"] = 0.25;
+
+
+-- SoundService.MainUI.Frame.Tabs.UICorner
+G2L["d"] = Instance.new("UICorner", G2L["c"]);
 
 
 
--- StarterGui.MainUI.Frame.HubTitle.TextLabel
-G2L["d"] = Instance.new("TextLabel", G2L["7"]);
-G2L["d"]["TextWrapped"] = true;
-G2L["d"]["BorderSizePixel"] = 0;
-G2L["d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["d"]["TextScaled"] = true;
-G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["d"]["TextSize"] = 14;
-G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["d"]["BackgroundTransparency"] = 1;
-G2L["d"]["Size"] = UDim2.new(0.98502, 0, 0.94619, 0);
-G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d"]["Text"] = [[TRAITS]];
-G2L["d"]["Position"] = UDim2.new(0.01441, 0, 0.02002, 0);
+-- SoundService.MainUI.Frame.Tabs.UIStroke
+G2L["e"] = Instance.new("UIStroke", G2L["c"]);
+G2L["e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["e"]["LineJoinMode"] = Enum.LineJoinMode.Bevel;
+G2L["e"]["Thickness"] = 2;
+G2L["e"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
--- StarterGui.MainUI.Frame.HubTitle.TextLabel.UIGradient
-G2L["e"] = Instance.new("UIGradient", G2L["d"]);
-G2L["e"]["Rotation"] = 90;
-G2L["e"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
+-- SoundService.MainUI.Frame.Tabs.UIStroke.UIGradient
+G2L["f"] = Instance.new("UIGradient", G2L["e"]);
+G2L["f"]["Rotation"] = 90;
+G2L["f"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Frame.UIAspectRatioConstraint
-G2L["f"] = Instance.new("UIAspectRatioConstraint", G2L["2"]);
-G2L["f"]["AspectRatio"] = 1.62114;
+-- SoundService.MainUI.Frame.Tabs.UIGradient
+G2L["10"] = Instance.new("UIGradient", G2L["c"]);
+G2L["10"]["Rotation"] = 90;
+G2L["10"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Frame.Frame
-G2L["10"] = Instance.new("Frame", G2L["2"]);
-G2L["10"]["BorderSizePixel"] = 0;
-G2L["10"]["BackgroundColor3"] = Color3.fromRGB(76, 76, 76);
-G2L["10"]["Size"] = UDim2.new(0.2817, 0, 0.88425, 0);
-G2L["10"]["Position"] = UDim2.new(0.01256, 0, 0.09599, 0);
-G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["10"]["BackgroundTransparency"] = 0.25;
+-- SoundService.MainUI.Frame.Tabs.Templates
+G2L["11"] = Instance.new("Folder", G2L["c"]);
+G2L["11"]["Name"] = [[Templates]];
 
 
--- StarterGui.MainUI.Frame.Frame.UIStroke
-G2L["11"] = Instance.new("UIStroke", G2L["10"]);
-G2L["11"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["11"]["LineJoinMode"] = Enum.LineJoinMode.Bevel;
-G2L["11"]["Thickness"] = 2;
-G2L["11"]["Color"] = Color3.fromRGB(255, 255, 255);
+-- SoundService.MainUI.Frame.Tabs.Templates.Button
+G2L["12"] = Instance.new("TextButton", G2L["11"]);
+G2L["12"]["TextWrapped"] = true;
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextSize"] = 25;
+G2L["12"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["TextScaled"] = true;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(76, 76, 76);
+G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["12"]["Size"] = UDim2.new(0.95, 0, 0.04, 0);
+G2L["12"]["Name"] = [[Button]];
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Visible"] = false;
+G2L["12"]["Position"] = UDim2.new(0, 0, 0.00673, 0);
 
 
--- StarterGui.MainUI.Frame.Frame.UIStroke.UIGradient
-G2L["12"] = Instance.new("UIGradient", G2L["11"]);
-G2L["12"]["Rotation"] = 90;
-G2L["12"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
-
-
--- StarterGui.MainUI.Frame.Frame.UIGradient
-G2L["13"] = Instance.new("UIGradient", G2L["10"]);
+-- SoundService.MainUI.Frame.Tabs.Templates.Button.UIGradient
+G2L["13"] = Instance.new("UIGradient", G2L["12"]);
 G2L["13"]["Rotation"] = 90;
 G2L["13"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Frame.Tabs
-G2L["14"] = Instance.new("Frame", G2L["2"]);
-G2L["14"]["BorderSizePixel"] = 0;
-G2L["14"]["BackgroundColor3"] = Color3.fromRGB(76, 76, 76);
-G2L["14"]["Size"] = UDim2.new(0.65901, 0, 0.88164, 0);
-G2L["14"]["Position"] = UDim2.new(0.32436, 0, 0.09599, 0);
-G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["14"]["Name"] = [[Tabs]];
-G2L["14"]["BackgroundTransparency"] = 0.25;
+-- SoundService.MainUI.Frame.Tabs.Templates.Button.UIStroke
+G2L["14"] = Instance.new("UIStroke", G2L["12"]);
+G2L["14"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["14"]["Thickness"] = 2.01;
+G2L["14"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
--- StarterGui.MainUI.Frame.Tabs.UICorner
-G2L["15"] = Instance.new("UICorner", G2L["14"]);
+-- SoundService.MainUI.Frame.Tabs.Templates.Button.UIStroke.UIGradient
+G2L["15"] = Instance.new("UIGradient", G2L["14"]);
+G2L["15"]["Rotation"] = 90;
+G2L["15"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
+-- SoundService.MainUI.Frame.Tabs.Templates.HeadTitle
+G2L["16"] = Instance.new("Frame", G2L["11"]);
+G2L["16"]["Visible"] = false;
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46);
+G2L["16"]["Size"] = UDim2.new(0.95, 0, 0.06896, 0);
+G2L["16"]["Position"] = UDim2.new(0.025, 0, 0.13698, 0);
+G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["Name"] = [[HeadTitle]];
 
--- StarterGui.MainUI.Frame.Tabs.UIStroke
-G2L["16"] = Instance.new("UIStroke", G2L["14"]);
-G2L["16"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["16"]["LineJoinMode"] = Enum.LineJoinMode.Bevel;
-G2L["16"]["Thickness"] = 2;
-G2L["16"]["Color"] = Color3.fromRGB(255, 255, 255);
 
-
--- StarterGui.MainUI.Frame.Tabs.UIStroke.UIGradient
+-- SoundService.MainUI.Frame.Tabs.Templates.HeadTitle.UIGradient
 G2L["17"] = Instance.new("UIGradient", G2L["16"]);
 G2L["17"]["Rotation"] = 90;
 G2L["17"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Frame.Tabs.UIGradient
-G2L["18"] = Instance.new("UIGradient", G2L["14"]);
-G2L["18"]["Rotation"] = 90;
-G2L["18"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
+-- SoundService.MainUI.Frame.Tabs.Templates.HeadTitle.UIStroke
+G2L["18"] = Instance.new("UIStroke", G2L["16"]);
+G2L["18"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["18"]["Thickness"] = 2.01;
+G2L["18"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates
-G2L["19"] = Instance.new("Folder", G2L["14"]);
-G2L["19"]["Name"] = [[Templates]];
+-- SoundService.MainUI.Frame.Tabs.Templates.HeadTitle.UIStroke.UIGradient
+G2L["19"] = Instance.new("UIGradient", G2L["18"]);
+G2L["19"]["Rotation"] = 90;
+G2L["19"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.Button
-G2L["1a"] = Instance.new("TextButton", G2L["19"]);
+-- SoundService.MainUI.Frame.Tabs.Templates.HeadTitle.TextLabel
+G2L["1a"] = Instance.new("TextLabel", G2L["16"]);
 G2L["1a"]["TextWrapped"] = true;
 G2L["1a"]["BorderSizePixel"] = 0;
-G2L["1a"]["TextSize"] = 25;
-G2L["1a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1a"]["TextScaled"] = true;
-G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(76, 76, 76);
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1a"]["TextSize"] = 14;
 G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["1a"]["Size"] = UDim2.new(0.95, 0, 0.04, 0);
-G2L["1a"]["Name"] = [[Button]];
+G2L["1a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1a"]["BackgroundTransparency"] = 1;
+G2L["1a"]["Size"] = UDim2.new(0.98502, 0, 0.94619, 0);
 G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1a"]["Visible"] = false;
-G2L["1a"]["Position"] = UDim2.new(0, 0, 0.00673, 0);
+G2L["1a"]["Text"] = [[LEGENDARY]];
+G2L["1a"]["Position"] = UDim2.new(0.01441, 0, 0.02002, 0);
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.Button.UIGradient
+-- SoundService.MainUI.Frame.Tabs.Templates.HeadTitle.TextLabel.UIGradient
 G2L["1b"] = Instance.new("UIGradient", G2L["1a"]);
 G2L["1b"]["Rotation"] = 90;
 G2L["1b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.Button.UIStroke
-G2L["1c"] = Instance.new("UIStroke", G2L["1a"]);
-G2L["1c"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["1c"]["Thickness"] = 2.01;
-G2L["1c"]["Color"] = Color3.fromRGB(255, 255, 255);
+-- SoundService.MainUI.Frame.Tabs.Templates.Space
+G2L["1c"] = Instance.new("Frame", G2L["11"]);
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46);
+G2L["1c"]["Size"] = UDim2.new(0.95, 0, 0.06896, 0);
+G2L["1c"]["Position"] = UDim2.new(0.025, 0, 0.13698, 0);
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["Name"] = [[Space]];
+G2L["1c"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.Button.UIStroke.UIGradient
-G2L["1d"] = Instance.new("UIGradient", G2L["1c"]);
-G2L["1d"]["Rotation"] = 90;
-G2L["1d"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
+-- SoundService.MainUI.Frame.Tabs.Templates.Toggle
+G2L["1d"] = Instance.new("TextButton", G2L["11"]);
+G2L["1d"]["TextWrapped"] = true;
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["TextSize"] = 25;
+G2L["1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["TextScaled"] = true;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(76, 76, 76);
+G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["1d"]["Size"] = UDim2.new(0.95, 0, 0.04, 0);
+G2L["1d"]["Name"] = [[Toggle]];
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["Text"] = [[]];
+G2L["1d"]["Visible"] = false;
+G2L["1d"]["Position"] = UDim2.new(0, 0, 0.00673, 0);
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.HeadTitle
-G2L["1e"] = Instance.new("Frame", G2L["19"]);
-G2L["1e"]["Visible"] = false;
-G2L["1e"]["BorderSizePixel"] = 0;
-G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46);
-G2L["1e"]["Size"] = UDim2.new(0.95, 0, 0.06896, 0);
-G2L["1e"]["Position"] = UDim2.new(0.025, 0, 0.13698, 0);
-G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1e"]["Name"] = [[HeadTitle]];
+-- SoundService.MainUI.Frame.Tabs.Templates.Toggle.UIStroke
+G2L["1e"] = Instance.new("UIStroke", G2L["1d"]);
+G2L["1e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["1e"]["Thickness"] = 2.01;
+G2L["1e"]["Color"] = Color3.fromRGB(255, 0, 5);
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.HeadTitle.UIGradient
+-- SoundService.MainUI.Frame.Tabs.Templates.Toggle.UIStroke.UIGradient
 G2L["1f"] = Instance.new("UIGradient", G2L["1e"]);
 G2L["1f"]["Rotation"] = 90;
 G2L["1f"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.HeadTitle.UIStroke
-G2L["20"] = Instance.new("UIStroke", G2L["1e"]);
-G2L["20"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["20"]["Thickness"] = 2.01;
-G2L["20"]["Color"] = Color3.fromRGB(255, 255, 255);
+-- SoundService.MainUI.Frame.Tabs.Templates.Toggle.UIGradient
+G2L["20"] = Instance.new("UIGradient", G2L["1d"]);
+G2L["20"]["Rotation"] = 90;
+G2L["20"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.HeadTitle.UIStroke.UIGradient
-G2L["21"] = Instance.new("UIGradient", G2L["20"]);
-G2L["21"]["Rotation"] = 90;
-G2L["21"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
+-- SoundService.MainUI.Frame.Tabs.Templates.Toggle.TextLabel
+G2L["21"] = Instance.new("TextLabel", G2L["1d"]);
+G2L["21"]["TextWrapped"] = true;
+G2L["21"]["BorderSizePixel"] = 0;
+G2L["21"]["TextScaled"] = true;
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["21"]["TextSize"] = 14;
+G2L["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["21"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["21"]["BackgroundTransparency"] = 1;
+G2L["21"]["RichText"] = true;
+G2L["21"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["21"]["Text"] = [[]];
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.HeadTitle.TextLabel
-G2L["22"] = Instance.new("TextLabel", G2L["1e"]);
-G2L["22"]["TextWrapped"] = true;
+-- SoundService.MainUI.Frame.Tabs.Templates.TextBox
+G2L["22"] = Instance.new("Frame", G2L["11"]);
+G2L["22"]["Visible"] = false;
 G2L["22"]["BorderSizePixel"] = 0;
-G2L["22"]["TextScaled"] = true;
-G2L["22"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["22"]["TextSize"] = 14;
-G2L["22"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["22"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["22"]["BackgroundTransparency"] = 1;
-G2L["22"]["Size"] = UDim2.new(0.98502, 0, 0.94619, 0);
+G2L["22"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46);
+G2L["22"]["Size"] = UDim2.new(0.95, 0, 0.04, 0);
+G2L["22"]["Position"] = UDim2.new(0.025, 0, 0.00595, 0);
 G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["22"]["Text"] = [[LEGENDARY]];
-G2L["22"]["Position"] = UDim2.new(0.01441, 0, 0.02002, 0);
+G2L["22"]["Name"] = [[TextBox]];
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.HeadTitle.TextLabel.UIGradient
+-- SoundService.MainUI.Frame.Tabs.Templates.TextBox.UIGradient
 G2L["23"] = Instance.new("UIGradient", G2L["22"]);
 G2L["23"]["Rotation"] = 90;
 G2L["23"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.Space
-G2L["24"] = Instance.new("Frame", G2L["19"]);
-G2L["24"]["BorderSizePixel"] = 0;
-G2L["24"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46);
-G2L["24"]["Size"] = UDim2.new(0.95, 0, 0.06896, 0);
-G2L["24"]["Position"] = UDim2.new(0.025, 0, 0.13698, 0);
-G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["24"]["Name"] = [[Space]];
-G2L["24"]["BackgroundTransparency"] = 1;
+-- SoundService.MainUI.Frame.Tabs.Templates.TextBox.UIStroke
+G2L["24"] = Instance.new("UIStroke", G2L["22"]);
+G2L["24"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["24"]["Thickness"] = 2.01;
+G2L["24"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.Toggle
-G2L["25"] = Instance.new("TextButton", G2L["19"]);
-G2L["25"]["TextWrapped"] = true;
-G2L["25"]["BorderSizePixel"] = 0;
-G2L["25"]["TextSize"] = 25;
-G2L["25"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["25"]["TextScaled"] = true;
-G2L["25"]["BackgroundColor3"] = Color3.fromRGB(76, 76, 76);
-G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["25"]["Size"] = UDim2.new(0.95, 0, 0.04, 0);
-G2L["25"]["Name"] = [[Toggle]];
-G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["25"]["Text"] = [[]];
-G2L["25"]["Visible"] = false;
-G2L["25"]["Position"] = UDim2.new(0, 0, 0.00673, 0);
+-- SoundService.MainUI.Frame.Tabs.Templates.TextBox.UIStroke.UIGradient
+G2L["25"] = Instance.new("UIGradient", G2L["24"]);
+G2L["25"]["Rotation"] = 90;
+G2L["25"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.Toggle.UIStroke
-G2L["26"] = Instance.new("UIStroke", G2L["25"]);
-G2L["26"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["26"]["Thickness"] = 2.01;
-G2L["26"]["Color"] = Color3.fromRGB(255, 0, 5);
+-- SoundService.MainUI.Frame.Tabs.Templates.TextBox.TextLabel
+G2L["26"] = Instance.new("TextLabel", G2L["22"]);
+G2L["26"]["TextWrapped"] = true;
+G2L["26"]["BorderSizePixel"] = 0;
+G2L["26"]["TextScaled"] = true;
+G2L["26"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["26"]["TextSize"] = 14;
+G2L["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["26"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["26"]["BackgroundTransparency"] = 1;
+G2L["26"]["RichText"] = true;
+G2L["26"]["Size"] = UDim2.new(0.55319, 0, 0.94619, 0);
+G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["Text"] = [[<font color="rgb(255, 112, 114)">Attack</font>]];
+G2L["26"]["Position"] = UDim2.new(0.01441, 0, 0.02002, 0);
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.Toggle.UIStroke.UIGradient
-G2L["27"] = Instance.new("UIGradient", G2L["26"]);
-G2L["27"]["Rotation"] = 90;
-G2L["27"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
+-- SoundService.MainUI.Frame.Tabs.Templates.TextBox.TextBox
+G2L["27"] = Instance.new("TextBox", G2L["22"]);
+G2L["27"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["27"]["BorderSizePixel"] = 0;
+G2L["27"]["TextWrapped"] = true;
+G2L["27"]["TextSize"] = 14;
+G2L["27"]["TextScaled"] = true;
+G2L["27"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["27"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["27"]["PlaceholderText"] = [[number]];
+G2L["27"]["Size"] = UDim2.new(0.40566, 0, 0.93679, 0);
+G2L["27"]["Position"] = UDim2.new(0.59213, 0, 0.02002, 0);
+G2L["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["27"]["Text"] = [[]];
+G2L["27"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.Toggle.UIGradient
-G2L["28"] = Instance.new("UIGradient", G2L["25"]);
-G2L["28"]["Rotation"] = 90;
-G2L["28"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
+-- SoundService.MainUI.Frame.Tabs.Templates.TextBox.TextBox.UIStroke
+G2L["28"] = Instance.new("UIStroke", G2L["27"]);
+G2L["28"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["28"]["Thickness"] = 2.01;
+G2L["28"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.Toggle.TextLabel
-G2L["29"] = Instance.new("TextLabel", G2L["25"]);
-G2L["29"]["TextWrapped"] = true;
-G2L["29"]["BorderSizePixel"] = 0;
-G2L["29"]["TextScaled"] = true;
-G2L["29"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["29"]["TextSize"] = 14;
-G2L["29"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["29"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["29"]["BackgroundTransparency"] = 1;
-G2L["29"]["RichText"] = true;
-G2L["29"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["29"]["Text"] = [[]];
+-- SoundService.MainUI.Frame.Tabs.Templates.TextBox.TextBox.UIStroke.UIGradient
+G2L["29"] = Instance.new("UIGradient", G2L["28"]);
+G2L["29"]["Rotation"] = 90;
+G2L["29"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.TextBox
-G2L["2a"] = Instance.new("Frame", G2L["19"]);
-G2L["2a"]["Visible"] = false;
-G2L["2a"]["BorderSizePixel"] = 0;
-G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46);
-G2L["2a"]["Size"] = UDim2.new(0.95, 0, 0.04, 0);
-G2L["2a"]["Position"] = UDim2.new(0.025, 0, 0.00595, 0);
-G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2a"]["Name"] = [[TextBox]];
+-- SoundService.MainUI.Frame.Tabs.Templates.TextBox.TextBox.UIGradient
+G2L["2a"] = Instance.new("UIGradient", G2L["27"]);
+G2L["2a"]["Rotation"] = 90;
+G2L["2a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.TextBox.UIGradient
-G2L["2b"] = Instance.new("UIGradient", G2L["2a"]);
-G2L["2b"]["Rotation"] = 90;
-G2L["2b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
+-- SoundService.MainUI.Frame.Tabs.Templates.Tab
+G2L["2b"] = Instance.new("ScrollingFrame", G2L["11"]);
+G2L["2b"]["Visible"] = false;
+G2L["2b"]["Active"] = true;
+G2L["2b"]["BorderSizePixel"] = 0;
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2b"]["Name"] = [[Tab]];
+G2L["2b"]["Size"] = UDim2.new(0.93266, 0, 0.91584, 0);
+G2L["2b"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2b"]["Position"] = UDim2.new(0.03085, 0, 0.03822, 0);
+G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2b"]["ScrollBarThickness"] = 5;
+G2L["2b"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.TextBox.UIStroke
-G2L["2c"] = Instance.new("UIStroke", G2L["2a"]);
-G2L["2c"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["2c"]["Thickness"] = 2.01;
-G2L["2c"]["Color"] = Color3.fromRGB(255, 255, 255);
+-- SoundService.MainUI.Frame.Tabs.Templates.Tab.UIPadding
+G2L["2c"] = Instance.new("UIPadding", G2L["2b"]);
+G2L["2c"]["PaddingTop"] = UDim.new(0.005, 0);
+G2L["2c"]["PaddingRight"] = UDim.new(0.035, 0);
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.TextBox.UIStroke.UIGradient
-G2L["2d"] = Instance.new("UIGradient", G2L["2c"]);
-G2L["2d"]["Rotation"] = 90;
-G2L["2d"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
+-- SoundService.MainUI.Frame.Tabs.Templates.Tab.UIListLayout
+G2L["2d"] = Instance.new("UIListLayout", G2L["2b"]);
+G2L["2d"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["2d"]["Padding"] = UDim.new(0.02, 0);
+G2L["2d"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.TextBox.TextLabel
-G2L["2e"] = Instance.new("TextLabel", G2L["2a"]);
-G2L["2e"]["TextWrapped"] = true;
+-- SoundService.MainUI.Frame.TabsList
+G2L["2e"] = Instance.new("ScrollingFrame", G2L["2"]);
+G2L["2e"]["Active"] = true;
+G2L["2e"]["ZIndex"] = 2;
 G2L["2e"]["BorderSizePixel"] = 0;
-G2L["2e"]["TextScaled"] = true;
 G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2e"]["TextSize"] = 14;
-G2L["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["2e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2e"]["BackgroundTransparency"] = 1;
-G2L["2e"]["RichText"] = true;
-G2L["2e"]["Size"] = UDim2.new(0.55319, 0, 0.94619, 0);
+G2L["2e"]["Name"] = [[TabsList]];
+G2L["2e"]["Size"] = UDim2.new(0.24761, 0, 0.85516, 0);
+G2L["2e"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["Position"] = UDim2.new(0.03094, 0, 0.12218, 0);
 G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2e"]["Text"] = [[<font color="rgb(255, 112, 114)">Attack</font>]];
-G2L["2e"]["Position"] = UDim2.new(0.01441, 0, 0.02002, 0);
+G2L["2e"]["ScrollBarThickness"] = 5;
+G2L["2e"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.TextBox.TextBox
-G2L["2f"] = Instance.new("TextBox", G2L["2a"]);
-G2L["2f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2f"]["BorderSizePixel"] = 0;
-G2L["2f"]["TextWrapped"] = true;
-G2L["2f"]["TextSize"] = 14;
-G2L["2f"]["TextScaled"] = true;
-G2L["2f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["2f"]["PlaceholderText"] = [[number]];
-G2L["2f"]["Size"] = UDim2.new(0.40566, 0, 0.93679, 0);
-G2L["2f"]["Position"] = UDim2.new(0.59213, 0, 0.02002, 0);
-G2L["2f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2f"]["Text"] = [[]];
-G2L["2f"]["BackgroundTransparency"] = 1;
+-- SoundService.MainUI.Frame.TabsList.Templates
+G2L["2f"] = Instance.new("Folder", G2L["2e"]);
+G2L["2f"]["Name"] = [[Templates]];
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.TextBox.TextBox.UIStroke
-G2L["30"] = Instance.new("UIStroke", G2L["2f"]);
-G2L["30"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["30"]["Thickness"] = 2.01;
-G2L["30"]["Color"] = Color3.fromRGB(255, 255, 255);
+-- SoundService.MainUI.Frame.TabsList.Templates.Button
+G2L["30"] = Instance.new("TextButton", G2L["2f"]);
+G2L["30"]["TextWrapped"] = true;
+G2L["30"]["Active"] = false;
+G2L["30"]["BorderSizePixel"] = 0;
+G2L["30"]["TextSize"] = 25;
+G2L["30"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["30"]["TextScaled"] = true;
+G2L["30"]["BackgroundColor3"] = Color3.fromRGB(76, 76, 76);
+G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["30"]["Size"] = UDim2.new(0.8955, 0, 0.0465, 0);
+G2L["30"]["Name"] = [[Button]];
+G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["30"]["Text"] = [[LOCAL PLAYER]];
+G2L["30"]["Visible"] = false;
+G2L["30"]["Position"] = UDim2.new(0, 0, 0.00673, 0);
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.TextBox.TextBox.UIStroke.UIGradient
+-- SoundService.MainUI.Frame.TabsList.Templates.Button.UIGradient
 G2L["31"] = Instance.new("UIGradient", G2L["30"]);
 G2L["31"]["Rotation"] = 90;
 G2L["31"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.TextBox.TextBox.UIGradient
-G2L["32"] = Instance.new("UIGradient", G2L["2f"]);
-G2L["32"]["Rotation"] = 90;
-G2L["32"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
+-- SoundService.MainUI.Frame.TabsList.Templates.Button.UIStroke
+G2L["32"] = Instance.new("UIStroke", G2L["30"]);
+G2L["32"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["32"]["Thickness"] = 2.01;
+G2L["32"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.Tab
-G2L["33"] = Instance.new("ScrollingFrame", G2L["19"]);
-G2L["33"]["Visible"] = false;
-G2L["33"]["Active"] = true;
-G2L["33"]["BorderSizePixel"] = 0;
-G2L["33"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["33"]["Name"] = [[Tab]];
-G2L["33"]["Size"] = UDim2.new(0.93266, 0, 0.91584, 0);
-G2L["33"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["33"]["Position"] = UDim2.new(0.03085, 0, 0.03822, 0);
-G2L["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["33"]["ScrollBarThickness"] = 5;
-G2L["33"]["BackgroundTransparency"] = 1;
+-- SoundService.MainUI.Frame.TabsList.Templates.Button.UIStroke.UIGradient
+G2L["33"] = Instance.new("UIGradient", G2L["32"]);
+G2L["33"]["Rotation"] = 90;
+G2L["33"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.Tab.UIPadding
-G2L["34"] = Instance.new("UIPadding", G2L["33"]);
-G2L["34"]["PaddingTop"] = UDim.new(0.005, 0);
-G2L["34"]["PaddingRight"] = UDim.new(0.035, 0);
+-- SoundService.MainUI.Frame.TabsList.UIListLayout
+G2L["34"] = Instance.new("UIListLayout", G2L["2e"]);
+G2L["34"]["Padding"] = UDim.new(0.02, 0);
+G2L["34"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
--- StarterGui.MainUI.Frame.Tabs.Templates.Tab.UIListLayout
-G2L["35"] = Instance.new("UIListLayout", G2L["33"]);
-G2L["35"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-G2L["35"]["Padding"] = UDim.new(0.02, 0);
-G2L["35"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+-- SoundService.MainUI.Frame.TabsList.UIPadding
+G2L["35"] = Instance.new("UIPadding", G2L["2e"]);
+G2L["35"]["PaddingTop"] = UDim.new(0.005, 0);
+G2L["35"]["PaddingLeft"] = UDim.new(0.015, 0);
 
 
--- StarterGui.MainUI.Frame.TabsList
-G2L["36"] = Instance.new("ScrollingFrame", G2L["2"]);
-G2L["36"]["Active"] = true;
-G2L["36"]["ZIndex"] = 2;
+-- SoundService.MainUI.Frame.HubTitle
+G2L["36"] = Instance.new("Frame", G2L["2"]);
 G2L["36"]["BorderSizePixel"] = 0;
-G2L["36"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["36"]["Name"] = [[TabsList]];
-G2L["36"]["Size"] = UDim2.new(0.24761, 0, 0.85516, 0);
-G2L["36"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["36"]["Position"] = UDim2.new(0.03094, 0, 0.12218, 0);
+G2L["36"]["BackgroundColor3"] = Color3.fromRGB(76, 76, 76);
+G2L["36"]["Size"] = UDim2.new(1.00034, 0, 0.07686, 0);
+G2L["36"]["Position"] = UDim2.new(-0.00034, 0, -0.00154, 0);
 G2L["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["36"]["ScrollBarThickness"] = 5;
-G2L["36"]["BackgroundTransparency"] = 1;
+G2L["36"]["Name"] = [[HubTitle]];
+G2L["36"]["BackgroundTransparency"] = 0.25;
 
 
--- StarterGui.MainUI.Frame.TabsList.Templates
-G2L["37"] = Instance.new("Folder", G2L["36"]);
-G2L["37"]["Name"] = [[Templates]];
+-- SoundService.MainUI.Frame.HubTitle.UICorner
+G2L["37"] = Instance.new("UICorner", G2L["36"]);
 
 
--- StarterGui.MainUI.Frame.TabsList.Templates.Button
-G2L["38"] = Instance.new("TextButton", G2L["37"]);
-G2L["38"]["TextWrapped"] = true;
-G2L["38"]["Active"] = false;
-G2L["38"]["BorderSizePixel"] = 0;
-G2L["38"]["TextSize"] = 25;
-G2L["38"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["38"]["TextScaled"] = true;
-G2L["38"]["BackgroundColor3"] = Color3.fromRGB(76, 76, 76);
-G2L["38"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["38"]["Size"] = UDim2.new(0.8955, 0, 0.0465, 0);
-G2L["38"]["Name"] = [[Button]];
-G2L["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["38"]["Text"] = [[LOCAL PLAYER]];
-G2L["38"]["Visible"] = false;
-G2L["38"]["Position"] = UDim2.new(0, 0, 0.00673, 0);
+
+-- SoundService.MainUI.Frame.HubTitle.UIStroke
+G2L["38"] = Instance.new("UIStroke", G2L["36"]);
+G2L["38"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["38"]["LineJoinMode"] = Enum.LineJoinMode.Bevel;
+G2L["38"]["Thickness"] = 2;
+G2L["38"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
--- StarterGui.MainUI.Frame.TabsList.Templates.Button.UIGradient
+-- SoundService.MainUI.Frame.HubTitle.UIStroke.UIGradient
 G2L["39"] = Instance.new("UIGradient", G2L["38"]);
 G2L["39"]["Rotation"] = 90;
 G2L["39"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Frame.TabsList.Templates.Button.UIStroke
-G2L["3a"] = Instance.new("UIStroke", G2L["38"]);
-G2L["3a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["3a"]["Thickness"] = 2.01;
-G2L["3a"]["Color"] = Color3.fromRGB(255, 255, 255);
+-- SoundService.MainUI.Frame.HubTitle.UIGradient
+G2L["3a"] = Instance.new("UIGradient", G2L["36"]);
+G2L["3a"]["Rotation"] = 90;
+G2L["3a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Frame.TabsList.Templates.Button.UIStroke.UIGradient
-G2L["3b"] = Instance.new("UIGradient", G2L["3a"]);
-G2L["3b"]["Rotation"] = 90;
-G2L["3b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
+-- SoundService.MainUI.Frame.HubTitle.UIScale
+G2L["3b"] = Instance.new("UIScale", G2L["36"]);
 
 
--- StarterGui.MainUI.Frame.TabsList.UIListLayout
-G2L["3c"] = Instance.new("UIListLayout", G2L["36"]);
-G2L["3c"]["Padding"] = UDim.new(0.02, 0);
-G2L["3c"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+-- SoundService.MainUI.Frame.HubTitle.TextLabel
+G2L["3c"] = Instance.new("TextLabel", G2L["36"]);
+G2L["3c"]["TextWrapped"] = true;
+G2L["3c"]["BorderSizePixel"] = 0;
+G2L["3c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["3c"]["TextScaled"] = true;
+G2L["3c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3c"]["TextSize"] = 14;
+G2L["3c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3c"]["BackgroundTransparency"] = 1;
+G2L["3c"]["Size"] = UDim2.new(0.98502, 0, 0.94619, 0);
+G2L["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3c"]["Text"] = [[TRAITS]];
+G2L["3c"]["Position"] = UDim2.new(0.01441, 0, 0.02002, 0);
 
 
--- StarterGui.MainUI.Frame.TabsList.UIPadding
-G2L["3d"] = Instance.new("UIPadding", G2L["36"]);
-G2L["3d"]["PaddingTop"] = UDim.new(0.005, 0);
-G2L["3d"]["PaddingLeft"] = UDim.new(0.015, 0);
+-- SoundService.MainUI.Frame.HubTitle.TextLabel.UIGradient
+G2L["3d"] = Instance.new("UIGradient", G2L["3c"]);
+G2L["3d"]["Rotation"] = 90;
+G2L["3d"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Main
+-- SoundService.MainUI.Main
 G2L["3e"] = Instance.new("ModuleScript", G2L["1"]);
 G2L["3e"]["Name"] = [[Main]];
 
 
--- StarterGui.MainUI.LocalScript
+-- SoundService.MainUI.LocalScript
 G2L["3f"] = Instance.new("LocalScript", G2L["1"]);
 
 
 
--- StarterGui.MainUI.Notifications
+-- SoundService.MainUI.Notifications
 G2L["40"] = Instance.new("ModuleScript", G2L["1"]);
 G2L["40"]["Name"] = [[Notifications]];
 
 
--- StarterGui.MainUI.Notifications.Notification
+-- SoundService.MainUI.Notifications.Notification
 G2L["41"] = Instance.new("Frame", G2L["40"]);
 G2L["41"]["ZIndex"] = 10;
 G2L["41"]["BorderSizePixel"] = 0;
@@ -550,7 +550,7 @@ G2L["41"]["Name"] = [[Notification]];
 G2L["41"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame
+-- SoundService.MainUI.Notifications.Notification.Frame
 G2L["42"] = Instance.new("Frame", G2L["41"]);
 G2L["42"]["ZIndex"] = 10;
 G2L["42"]["BorderSizePixel"] = 0;
@@ -561,7 +561,7 @@ G2L["42"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
 G2L["42"]["BackgroundTransparency"] = 0.1;
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.UIStroke
+-- SoundService.MainUI.Notifications.Notification.Frame.UIStroke
 G2L["43"] = Instance.new("UIStroke", G2L["42"]);
 G2L["43"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["43"]["LineJoinMode"] = Enum.LineJoinMode.Miter;
@@ -569,19 +569,19 @@ G2L["43"]["Thickness"] = 2;
 G2L["43"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.UIStroke.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.UIStroke.UIGradient
 G2L["44"] = Instance.new("UIGradient", G2L["43"]);
 G2L["44"]["Rotation"] = 90;
 G2L["44"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.UIGradient
 G2L["45"] = Instance.new("UIGradient", G2L["42"]);
 G2L["45"]["Rotation"] = 90;
 G2L["45"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.Button1
+-- SoundService.MainUI.Notifications.Notification.Frame.Button1
 G2L["46"] = Instance.new("TextButton", G2L["42"]);
 G2L["46"]["TextWrapped"] = true;
 G2L["46"]["SizeConstraint"] = Enum.SizeConstraint.RelativeXX;
@@ -597,7 +597,7 @@ G2L["46"]["Text"] = [[]];
 G2L["46"]["Position"] = UDim2.new(0, 0, 1, 0);
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.Button1.UIStroke
+-- SoundService.MainUI.Notifications.Notification.Frame.Button1.UIStroke
 G2L["47"] = Instance.new("UIStroke", G2L["46"]);
 G2L["47"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["47"]["LineJoinMode"] = Enum.LineJoinMode.Miter;
@@ -605,19 +605,19 @@ G2L["47"]["Thickness"] = 2;
 G2L["47"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.Button1.UIStroke.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.Button1.UIStroke.UIGradient
 G2L["48"] = Instance.new("UIGradient", G2L["47"]);
 G2L["48"]["Rotation"] = 90;
 G2L["48"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.Button1.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.Button1.UIGradient
 G2L["49"] = Instance.new("UIGradient", G2L["46"]);
 G2L["49"]["Rotation"] = 90;
 G2L["49"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.Button1.TextLabel
+-- SoundService.MainUI.Notifications.Notification.Frame.Button1.TextLabel
 G2L["4a"] = Instance.new("TextLabel", G2L["46"]);
 G2L["4a"]["TextWrapped"] = true;
 G2L["4a"]["TextStrokeTransparency"] = 0.75;
@@ -633,14 +633,14 @@ G2L["4a"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
 G2L["4a"]["Text"] = [[No]];
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.Button1.TextLabel.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.Button1.TextLabel.UIGradient
 G2L["4b"] = Instance.new("UIGradient", G2L["4a"]);
 G2L["4b"]["Enabled"] = false;
 G2L["4b"]["Rotation"] = 90;
 G2L["4b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(126, 176, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.Label
+-- SoundService.MainUI.Notifications.Notification.Frame.Label
 G2L["4c"] = Instance.new("TextLabel", G2L["42"]);
 G2L["4c"]["TextWrapped"] = true;
 G2L["4c"]["TextStrokeTransparency"] = 0.75;
@@ -659,13 +659,13 @@ G2L["4c"]["Name"] = [[Label]];
 G2L["4c"]["Position"] = UDim2.new(0, 0, 0, 2);
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.Label.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.Label.UIGradient
 G2L["4d"] = Instance.new("UIGradient", G2L["4c"]);
 G2L["4d"]["Rotation"] = 90;
 G2L["4d"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(126, 176, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.Button2
+-- SoundService.MainUI.Notifications.Notification.Frame.Button2
 G2L["4e"] = Instance.new("TextButton", G2L["42"]);
 G2L["4e"]["TextWrapped"] = true;
 G2L["4e"]["SizeConstraint"] = Enum.SizeConstraint.RelativeXX;
@@ -681,7 +681,7 @@ G2L["4e"]["Text"] = [[]];
 G2L["4e"]["Position"] = UDim2.new(1, 0, 1, 0);
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.Button2.UIStroke
+-- SoundService.MainUI.Notifications.Notification.Frame.Button2.UIStroke
 G2L["4f"] = Instance.new("UIStroke", G2L["4e"]);
 G2L["4f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["4f"]["LineJoinMode"] = Enum.LineJoinMode.Miter;
@@ -689,19 +689,19 @@ G2L["4f"]["Thickness"] = 2;
 G2L["4f"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.Button2.UIStroke.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.Button2.UIStroke.UIGradient
 G2L["50"] = Instance.new("UIGradient", G2L["4f"]);
 G2L["50"]["Rotation"] = 90;
 G2L["50"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.Button2.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.Button2.UIGradient
 G2L["51"] = Instance.new("UIGradient", G2L["4e"]);
 G2L["51"]["Rotation"] = 90;
 G2L["51"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.Button2.TextLabel
+-- SoundService.MainUI.Notifications.Notification.Frame.Button2.TextLabel
 G2L["52"] = Instance.new("TextLabel", G2L["4e"]);
 G2L["52"]["TextWrapped"] = true;
 G2L["52"]["TextStrokeTransparency"] = 0.75;
@@ -717,14 +717,14 @@ G2L["52"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
 G2L["52"]["Text"] = [[Yes]];
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.Button2.TextLabel.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.Button2.TextLabel.UIGradient
 G2L["53"] = Instance.new("UIGradient", G2L["52"]);
 G2L["53"]["Enabled"] = false;
 G2L["53"]["Rotation"] = 90;
 G2L["53"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(126, 176, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.Description
+-- SoundService.MainUI.Notifications.Notification.Frame.Description
 G2L["54"] = Instance.new("TextLabel", G2L["42"]);
 G2L["54"]["TextWrapped"] = true;
 G2L["54"]["TextStrokeTransparency"] = 0.75;
@@ -742,14 +742,14 @@ G2L["54"]["Name"] = [[Description]];
 G2L["54"]["Position"] = UDim2.new(0, 0, 0, 22);
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.Description.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.Description.UIGradient
 G2L["55"] = Instance.new("UIGradient", G2L["54"]);
 G2L["55"]["Enabled"] = false;
 G2L["55"]["Rotation"] = 90;
 G2L["55"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(226, 226, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(126, 176, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.SingleButton
+-- SoundService.MainUI.Notifications.Notification.Frame.SingleButton
 G2L["56"] = Instance.new("TextButton", G2L["42"]);
 G2L["56"]["TextWrapped"] = true;
 G2L["56"]["SizeConstraint"] = Enum.SizeConstraint.RelativeXX;
@@ -766,7 +766,7 @@ G2L["56"]["Visible"] = false;
 G2L["56"]["Position"] = UDim2.new(0, 0, 1, 0);
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.SingleButton.UIStroke
+-- SoundService.MainUI.Notifications.Notification.Frame.SingleButton.UIStroke
 G2L["57"] = Instance.new("UIStroke", G2L["56"]);
 G2L["57"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["57"]["LineJoinMode"] = Enum.LineJoinMode.Miter;
@@ -774,19 +774,19 @@ G2L["57"]["Thickness"] = 2;
 G2L["57"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.SingleButton.UIStroke.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.SingleButton.UIStroke.UIGradient
 G2L["58"] = Instance.new("UIGradient", G2L["57"]);
 G2L["58"]["Rotation"] = 90;
 G2L["58"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.SingleButton.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.SingleButton.UIGradient
 G2L["59"] = Instance.new("UIGradient", G2L["56"]);
 G2L["59"]["Rotation"] = 90;
 G2L["59"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.SingleButton.TextLabel
+-- SoundService.MainUI.Notifications.Notification.Frame.SingleButton.TextLabel
 G2L["5a"] = Instance.new("TextLabel", G2L["56"]);
 G2L["5a"]["TextWrapped"] = true;
 G2L["5a"]["TextStrokeTransparency"] = 0.75;
@@ -802,14 +802,14 @@ G2L["5a"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
 G2L["5a"]["Text"] = [[Ok]];
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.SingleButton.TextLabel.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.SingleButton.TextLabel.UIGradient
 G2L["5b"] = Instance.new("UIGradient", G2L["5a"]);
 G2L["5b"]["Enabled"] = false;
 G2L["5b"]["Rotation"] = 90;
 G2L["5b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(126, 176, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.TripleButton1
+-- SoundService.MainUI.Notifications.Notification.Frame.TripleButton1
 G2L["5c"] = Instance.new("TextButton", G2L["42"]);
 G2L["5c"]["TextWrapped"] = true;
 G2L["5c"]["SizeConstraint"] = Enum.SizeConstraint.RelativeXX;
@@ -826,7 +826,7 @@ G2L["5c"]["Visible"] = false;
 G2L["5c"]["Position"] = UDim2.new(0, 0, 1, 0);
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.TripleButton1.UIStroke
+-- SoundService.MainUI.Notifications.Notification.Frame.TripleButton1.UIStroke
 G2L["5d"] = Instance.new("UIStroke", G2L["5c"]);
 G2L["5d"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["5d"]["LineJoinMode"] = Enum.LineJoinMode.Miter;
@@ -834,19 +834,19 @@ G2L["5d"]["Thickness"] = 2;
 G2L["5d"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.TripleButton1.UIStroke.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.TripleButton1.UIStroke.UIGradient
 G2L["5e"] = Instance.new("UIGradient", G2L["5d"]);
 G2L["5e"]["Rotation"] = 90;
 G2L["5e"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.TripleButton1.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.TripleButton1.UIGradient
 G2L["5f"] = Instance.new("UIGradient", G2L["5c"]);
 G2L["5f"]["Rotation"] = 90;
 G2L["5f"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.TripleButton1.TextLabel
+-- SoundService.MainUI.Notifications.Notification.Frame.TripleButton1.TextLabel
 G2L["60"] = Instance.new("TextLabel", G2L["5c"]);
 G2L["60"]["TextWrapped"] = true;
 G2L["60"]["TextStrokeTransparency"] = 0.75;
@@ -862,14 +862,14 @@ G2L["60"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
 G2L["60"]["Text"] = [[No]];
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.TripleButton1.TextLabel.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.TripleButton1.TextLabel.UIGradient
 G2L["61"] = Instance.new("UIGradient", G2L["60"]);
 G2L["61"]["Enabled"] = false;
 G2L["61"]["Rotation"] = 90;
 G2L["61"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(126, 176, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.TripleButton2
+-- SoundService.MainUI.Notifications.Notification.Frame.TripleButton2
 G2L["62"] = Instance.new("TextButton", G2L["42"]);
 G2L["62"]["TextWrapped"] = true;
 G2L["62"]["SizeConstraint"] = Enum.SizeConstraint.RelativeXX;
@@ -886,7 +886,7 @@ G2L["62"]["Visible"] = false;
 G2L["62"]["Position"] = UDim2.new(0.333, 0, 1, 0);
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.TripleButton2.UIStroke
+-- SoundService.MainUI.Notifications.Notification.Frame.TripleButton2.UIStroke
 G2L["63"] = Instance.new("UIStroke", G2L["62"]);
 G2L["63"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["63"]["LineJoinMode"] = Enum.LineJoinMode.Miter;
@@ -894,19 +894,19 @@ G2L["63"]["Thickness"] = 2;
 G2L["63"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.TripleButton2.UIStroke.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.TripleButton2.UIStroke.UIGradient
 G2L["64"] = Instance.new("UIGradient", G2L["63"]);
 G2L["64"]["Rotation"] = 90;
 G2L["64"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.TripleButton2.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.TripleButton2.UIGradient
 G2L["65"] = Instance.new("UIGradient", G2L["62"]);
 G2L["65"]["Rotation"] = 90;
 G2L["65"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.TripleButton2.TextLabel
+-- SoundService.MainUI.Notifications.Notification.Frame.TripleButton2.TextLabel
 G2L["66"] = Instance.new("TextLabel", G2L["62"]);
 G2L["66"]["TextWrapped"] = true;
 G2L["66"]["TextStrokeTransparency"] = 0.75;
@@ -922,14 +922,14 @@ G2L["66"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
 G2L["66"]["Text"] = [[No]];
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.TripleButton2.TextLabel.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.TripleButton2.TextLabel.UIGradient
 G2L["67"] = Instance.new("UIGradient", G2L["66"]);
 G2L["67"]["Enabled"] = false;
 G2L["67"]["Rotation"] = 90;
 G2L["67"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(126, 176, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.TripleButton3
+-- SoundService.MainUI.Notifications.Notification.Frame.TripleButton3
 G2L["68"] = Instance.new("TextButton", G2L["42"]);
 G2L["68"]["TextWrapped"] = true;
 G2L["68"]["SizeConstraint"] = Enum.SizeConstraint.RelativeXX;
@@ -946,7 +946,7 @@ G2L["68"]["Visible"] = false;
 G2L["68"]["Position"] = UDim2.new(0.666, 0, 1, 0);
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.TripleButton3.UIStroke
+-- SoundService.MainUI.Notifications.Notification.Frame.TripleButton3.UIStroke
 G2L["69"] = Instance.new("UIStroke", G2L["68"]);
 G2L["69"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["69"]["LineJoinMode"] = Enum.LineJoinMode.Miter;
@@ -954,19 +954,19 @@ G2L["69"]["Thickness"] = 2;
 G2L["69"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.TripleButton3.UIStroke.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.TripleButton3.UIStroke.UIGradient
 G2L["6a"] = Instance.new("UIGradient", G2L["69"]);
 G2L["6a"]["Rotation"] = 90;
 G2L["6a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.TripleButton3.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.TripleButton3.UIGradient
 G2L["6b"] = Instance.new("UIGradient", G2L["68"]);
 G2L["6b"]["Rotation"] = 90;
 G2L["6b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(176, 176, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(76, 151, 255))};
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.TripleButton3.TextLabel
+-- SoundService.MainUI.Notifications.Notification.Frame.TripleButton3.TextLabel
 G2L["6c"] = Instance.new("TextLabel", G2L["68"]);
 G2L["6c"]["TextWrapped"] = true;
 G2L["6c"]["TextStrokeTransparency"] = 0.75;
@@ -982,24 +982,24 @@ G2L["6c"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
 G2L["6c"]["Text"] = [[No]];
 
 
--- StarterGui.MainUI.Notifications.Notification.Frame.TripleButton3.TextLabel.UIGradient
+-- SoundService.MainUI.Notifications.Notification.Frame.TripleButton3.TextLabel.UIGradient
 G2L["6d"] = Instance.new("UIGradient", G2L["6c"]);
 G2L["6d"]["Enabled"] = false;
 G2L["6d"]["Rotation"] = 90;
 G2L["6d"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(126, 176, 255))};
 
 
--- StarterGui.MainUI.trove
+-- SoundService.MainUI.trove
 G2L["6e"] = Instance.new("ModuleScript", G2L["1"]);
 G2L["6e"]["Name"] = [[trove]];
 
 
--- StarterGui.MainUI.trove.init.spec
+-- SoundService.MainUI.trove.init.spec
 G2L["6f"] = Instance.new("ModuleScript", G2L["6e"]);
 G2L["6f"]["Name"] = [[init.spec]];
 
 
--- StarterGui.MainUI.TraitsInfo
+-- SoundService.MainUI.TraitsInfo
 G2L["70"] = Instance.new("ModuleScript", G2L["1"]);
 G2L["70"]["Name"] = [[TraitsInfo]];
 
@@ -1106,6 +1106,8 @@ function Tab:AddHeadTitle(Name)
 	HeadTitle.Visible = true
 
 	self.HeadTitles[Name] = HeadTitle
+	
+	return HeadTitle
 end
 
 function Tab:AddSpace()
@@ -1639,7 +1641,7 @@ Closure = function()
 };
 end;
 };
--- StarterGui.MainUI.LocalScript
+-- SoundService.MainUI.LocalScript
 local function C_3f()
 local script = G2L["3f"];
 	
@@ -1654,6 +1656,8 @@ local script = G2L["3f"];
 	local TAB_MAIN = New:AddTab("Main")
 	local TAB_TRAIT_SELECTION = New:AddTab("Trait Selection")
 	local TAB_STATS_SELECTION = New:AddTab("Stats Selection")
+	
+	
 	
 	if not getfenv().WANTED_TRAITS then
 		getfenv().WANTED_TRAITS = {}
@@ -1775,15 +1779,30 @@ local script = G2L["3f"];
 	
 	SPECIAL_TAB_TOGGLE.TextLabel.Text = '<font color="rgb(116, 211, 255)">Special</font>'
 	
+	local ROLLED = TAB_MAIN:AddHeadTitle("TOTAL ROLLED: 0")
+	
+	
+	if not getfenv().TOTAL_ROLLED then
+		getfenv().TOTAL_ROLLED = 0
+	end
+	
+	local Working = false
 	
 	TAB_MAIN:AddToggle("Start Rolling",function(isToggled)
 		if isToggled then	
 			TraitService.RF.DiscardTraits:InvokeServer()
 			getfenv().TRAITS_ROLLING_CONNECTION = TraitService.RE.TraitHand.OnClientEvent:Connect(function(TraitHand)
+				if Working then
+					repeat
+						task.wait()
+					until not Working
+				end
+				Working = true
 				for Id, Card in pairs(TraitHand) do
 					local TraitName = Card.Hexed and "Hexed " .. Card.Trait or Card.Trait
 					
-					print(TraitName)
+					getfenv().TOTAL_ROLLED += 1
+					ROLLED.TextLabel.Text = "TOTAL ROLLED: " .. getfenv().TOTAL_ROLLED
 					
 					if getfenv().WANTED_TRAITS[TraitName] then
 						
@@ -1807,7 +1826,6 @@ local script = G2L["3f"];
 									print(StatValue,CardStat)
 									
 									if CardStat < StatValue then
-										print("ended")
 										Ended = true
 										break
 									elseif StatValue > 0 then
@@ -1834,10 +1852,13 @@ local script = G2L["3f"];
 						})
 						
 						getfenv().TRAITS_ROLLING_CONNECTION:Disconnect()
+						
+						Working = false
 	
 						return
 					end
 				end
+				Working = false
 				TraitService.RF.DiscardTraits:InvokeServer()
 			end)
 		else
