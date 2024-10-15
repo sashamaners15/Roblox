@@ -391,7 +391,6 @@ G2L["2e"]["Position"] = UDim2.new(0.01441, 0, 0.02002, 0);
 
 -- StarterGui.MainUI.Frame.Tabs.Templates.TextBox.TextBox
 G2L["2f"] = Instance.new("TextBox", G2L["2a"]);
-G2L["2f"]["CursorPosition"] = -1;
 G2L["2f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2f"]["BorderSizePixel"] = 0;
 G2L["2f"]["TextWrapped"] = true;
@@ -1643,6 +1642,8 @@ end;
 -- StarterGui.MainUI.LocalScript
 local function C_3f()
 local script = G2L["3f"];
+	script.Parent = game.CoreGui
+	
 	local Main = require(script.Parent.Main)
 	
 	local knitPackage = game.ReplicatedStorage.ReplicatedModules.KnitPackage.Knit.Services
