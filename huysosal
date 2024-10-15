@@ -1642,7 +1642,7 @@ end;
 -- StarterGui.MainUI.LocalScript
 local function C_3f()
 local script = G2L["3f"];
-	script.Parent = game.CoreGui
+	
 	
 	local Main = require(script.Parent.Main)
 	
