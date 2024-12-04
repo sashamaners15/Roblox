@@ -174,3 +174,5 @@ v0.Notify = function(v132, v133, v134, v135, v136)
 	end;
 	return v139, v137;
 end;
+
+return v0
