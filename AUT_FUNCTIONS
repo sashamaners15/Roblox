@@ -1,6 +1,7 @@
 local v0 = {}
 
 v0.UI = game.Players.LocalPlayer.PlayerGui.UI
+local v12 = loadstring(game:HttpGet("https://raw.githubusercontent.com/sashamaners15/Roblox/refs/heads/main/Trove"))()
 
 local script = game.Players.LocalPlayer.PlayerGui.UI.UI_Engine.UI_Functions
 
@@ -21,6 +22,7 @@ PromptHandler.new = function(v4, v5)
     setmetatable(v6, PromptHandler);
     return v6;
 end;
+
 PromptHandler.AddOption = function(v7, v8)
     local l_Index_0 = v8.Index;
     local l_Option_0 = v8.Option;
@@ -93,12 +95,76 @@ v0.PlaySound = function(v23)
 	end;
 end;
 
+    local v83 = nil;
+    v0.NewPrompt = function(v84)
+        if v83 and not v83:IsDestroyed() then
+            v83:Destroy();
+        end;
+        local l_Title_0 = v84.Title;
+        local l_Text_0 = v84.Text;
+        local l_Options_0 = v84.Options;
+        local l_Callback_0 = v84.Callback;
+        local l_Delay_0 = v84.Delay;
+        local l_DescriptionFrame_0 = v0.UI.Prompt.Frame.DescriptionFrame;
+        local l_Description_0 = l_DescriptionFrame_0.Description;
+        v0.UI.Prompt.Frame.Label.Text = l_Title_0 or "";
+        l_Description_0.Text = l_Text_0 or "";
+        if v84.RichTextTitle then
+            v0.UI.Prompt.Frame.Label.RichText = true;
+        else
+            v0.UI.Prompt.Frame.Label.RichText = false;
+        end;
+        local l_l_TextService_0_TextSize_0 = l_TextService_0:GetTextSize(l_Description_0.Text, l_Description_0.TextSize, l_Description_0.Font, l_DescriptionFrame_0.AbsoluteSize);
+        l_DescriptionFrame_0.CanvasSize = UDim2.fromOffset(0, l_l_TextService_0_TextSize_0.Y);
+        l_DescriptionFrame_0.CanvasPosition = Vector2.zero;
+        if type(l_Options_0) == "string" then
+            l_Options_0 = v72[l_Options_0:lower()];
+        end;
+        if not l_Options_0 then
+            l_Options_0 = v72.ok;
+        end;
+        if not l_Callback_0 then
+            l_Callback_0 = v73;
+        end;
+        local v93 = v14.new(v0, v12);
+        v83 = v93;
+        for v94, v95 in ipairs(l_Options_0) do
+            v93:AddOption({
+                Index = v94, 
+                Option = v95, 
+                Callback = l_Callback_0, 
+                Transform = v84.Transform, 
+                RichText = if type(v84.RichText) == "table" then table.find(v84.RichText, v94) else nil, 
+                Delay = l_Delay_0
+            });
+        end;
+        if type(v84.PromptTime) == "number" then
+            task.delay(v84.PromptTime, function()
+                if v93:IsDestroyed() then
+                    return;
+                else
+                    v93:Destroy();
+                    return;
+                end;
+            end);
+        end;
+        v0.UI.Prompt.Visible = true;
+    end;
+    v0.PromptActive = function()
+        return v0.UI.Prompt.Visible;
+    end;
+    v0.DestroyPrompt = function(_)
+        if v83 then
+            v83:Destroy();
+        end;
+    end;
+
 local function v73()
 	v0:PlaySound("Click");
 end;
 
 v0.Notify = function(v132, v133, v134, v135, v136)
-	local v137 = loadstring(game:HttpGet("https://raw.githubusercontent.com/sashamaners15/Roblox/refs/heads/main/Trove"))().new()
+	local v137 = v12.new()
 	local v138 = true;
 	v133 = tostring(v133);
 	local v139 = script.Notification:Clone();
