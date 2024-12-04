@@ -31,7 +31,7 @@ local function v73()
 	v0:PlaySound("Click");
 end;
 
-v0.Notify = function(v131, v132, v133, v134, v135, v136) --[[ Line: 396 ]] --[[ Name: Notify ]]
+v0.Notify = function(v131, v132, v133, v134, v135, v136)
 	local v137 = loadstring(game:HttpGet("https://raw.githubusercontent.com/sashamaners15/Roblox/refs/heads/main/Trove"))()
 	local v138 = true;
 	v133 = tostring(v133);
