@@ -1,5 +1,7 @@
 local v0 = {}
 
+local script = game.Players.LocalPlayer.PlayerGui.UI.UI_Engine.UI_Functions
+
 local v72 = {
 	ok = {
 		[1] = "Ok"
