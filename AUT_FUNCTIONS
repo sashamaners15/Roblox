@@ -1,0 +1,183 @@
+local v0 = {}
+
+local v72 = {
+	ok = {
+		[1] = "Ok"
+	}, 
+	choose = {
+		[1] = "No", 
+		[2] = "Yes"
+	}, 
+	purchase = {
+		[1] = "Cancel", 
+		[2] = "Purchase"
+	}, 
+	choose_currency = {
+		[1] = "Cancel", 
+		[2] = "Buy with uS", 
+		[3] = "Buy with uP"
+	}, 
+	none = {}
+};
+
+v0.PlaySound = function(v22, v23)
+	local l_FirstChild_0 = v22.UI.Sounds:FindFirstChild(v23);
+	if l_FirstChild_0 then
+		game.SoundService:PlayLocalSound(l_FirstChild_0);
+	end;
+end;
+
+local function v73()
+	v0:PlaySound("Click");
+end;
+
+v0.Notify = function(v131, v132, v133, v134, v135, v136) --[[ Line: 396 ]] --[[ Name: Notify ]]
+	local v137 = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sleitnick/RbxUtil/main/modules/trove/init.lua"))()
+	local v138 = true;
+	v133 = tostring(v133);
+	local v139 = script.Notification:Clone();
+	v139.Frame.Label.Text = v132 or "";
+	v139.Frame.Description.Text = v133;
+	v139.Frame.Description.TextScaled = #v133 >= 100;
+	if typeof(v135) == "string" then
+		v135 = v72[v135:lower()];
+	end;
+	if not v135 then
+		v135 = v72.ok;
+	end;
+	if not v136 then
+		v136 = v73;
+	end;
+	local function _(v140, v141, v142) --[[ Line: 418 ]] --[[ Name: Bind ]]
+		v137:Add(v140.MouseButton1Down:Connect(function() --[[ Line: 419 ]]
+			local v143 = v136 and v136(v140, v141, v142, v139, v137) or nil;
+			if v143 == nil or v143 == true then
+				v137:Destroy();
+			end;
+		end));
+	end;
+	if #v135 == 1 then
+		v139.Frame.TripleButton1.Visible = false;
+		v139.Frame.TripleButton2.Visible = false;
+		v139.Frame.TripleButton3.Visible = false;
+		v139.Frame.Button1.Visible = false;
+		v139.Frame.Button2.Visible = false;
+		v139.Frame.SingleButton.Visible = true;
+		v139.Frame.SingleButton.TextLabel.Text = v135[1];
+		local l_SingleButton_0 = v139.Frame.SingleButton;
+		local v146 = v135[1];
+		local l_MouseButton1Down_1 = l_SingleButton_0.MouseButton1Down;
+		local v148 = 1;
+		v137:Add(l_MouseButton1Down_1:Connect(function() --[[ Line: 419 ]]
+			local v149 = v136 and v136(l_SingleButton_0, v148, v146, v139, v137) or nil;
+			if v149 == nil or v149 == true then
+				v137:Destroy();
+			end;
+		end));
+	elseif #v135 == 2 then
+		v139.Frame.TripleButton1.Visible = false;
+		v139.Frame.TripleButton2.Visible = false;
+		v139.Frame.TripleButton3.Visible = false;
+		v139.Frame.Button1.Visible = true;
+		v139.Frame.Button2.Visible = true;
+		v139.Frame.SingleButton.Visible = false;
+		v139.Frame.Button1.TextLabel.Text = v135[1];
+		v139.Frame.Button2.TextLabel.Text = v135[2];
+		local l_Button1_0 = v139.Frame.Button1;
+		local v151 = v135[1];
+		local l_MouseButton1Down_2 = l_Button1_0.MouseButton1Down;
+		local v153 = 1;
+		local l_l_Button1_0_0 = l_Button1_0 --[[ copy: 10 -> 24 ]];
+		local l_v153_0 = v153 --[[ copy: 17 -> 25 ]];
+		local l_v151_0 = v151 --[[ copy: 11 -> 26 ]];
+		v137:Add(l_MouseButton1Down_2:Connect(function() --[[ Line: 419 ]]
+			local v157 = v136 and v136(l_l_Button1_0_0, l_v153_0, l_v151_0, v139, v137) or nil;
+			if v157 == nil or v157 == true then
+				v137:Destroy();
+			end;
+		end));
+		l_Button1_0 = v139.Frame.Button2;
+		v151 = v135[2];
+		l_MouseButton1Down_2 = l_Button1_0.MouseButton1Down;
+		v153 = 2;
+		v137:Add(l_MouseButton1Down_2:Connect(function() --[[ Line: 419 ]]
+			local v158 = v136 and v136(l_Button1_0, v153, v151, v139, v137) or nil;
+			if v158 == nil or v158 == true then
+				v137:Destroy();
+			end;
+		end));
+	elseif #v135 == 3 then
+		v139.Frame.TripleButton1.Visible = true;
+		v139.Frame.TripleButton2.Visible = true;
+		v139.Frame.TripleButton3.Visible = true;
+		v139.Frame.Button1.Visible = false;
+		v139.Frame.Button2.Visible = false;
+		v139.Frame.SingleButton.Visible = false;
+		v139.Frame.TripleButton1.TextLabel.Text = v135[1];
+		v139.Frame.TripleButton2.TextLabel.Text = v135[2];
+		v139.Frame.TripleButton3.TextLabel.Text = v135[3];
+		local l_TripleButton1_0 = v139.Frame.TripleButton1;
+		local v160 = v135[1];
+		local l_MouseButton1Down_3 = l_TripleButton1_0.MouseButton1Down;
+		local v162 = 1;
+		local l_l_TripleButton1_0_0 = l_TripleButton1_0 --[[ copy: 10 -> 18 ]];
+		local l_v162_0 = v162 --[[ copy: 17 -> 19 ]];
+		local l_v160_0 = v160 --[[ copy: 11 -> 20 ]];
+		v137:Add(l_MouseButton1Down_3:Connect(function() --[[ Line: 419 ]]
+			local v166 = v136 and v136(l_l_TripleButton1_0_0, l_v162_0, l_v160_0, v139, v137) or nil;
+			if v166 == nil or v166 == true then
+				v137:Destroy();
+			end;
+		end));
+		l_TripleButton1_0 = v139.Frame.TripleButton2;
+		v160 = v135[2];
+		l_MouseButton1Down_3 = l_TripleButton1_0.MouseButton1Down;
+		v162 = 2;
+		local l_l_TripleButton1_0_1 = l_TripleButton1_0 --[[ copy: 10 -> 21 ]];
+		local l_v162_1 = v162 --[[ copy: 17 -> 22 ]];
+		local l_v160_1 = v160 --[[ copy: 11 -> 23 ]];
+		v137:Add(l_MouseButton1Down_3:Connect(function() --[[ Line: 419 ]]
+			local v170 = v136 and v136(l_l_TripleButton1_0_1, l_v162_1, l_v160_1, v139, v137) or nil;
+			if v170 == nil or v170 == true then
+				v137:Destroy();
+			end;
+		end));
+		l_TripleButton1_0 = v139.Frame.TripleButton3;
+		v160 = v135[3];
+		l_MouseButton1Down_3 = l_TripleButton1_0.MouseButton1Down;
+		v162 = 3;
+		v137:Add(l_MouseButton1Down_3:Connect(function() --[[ Line: 419 ]]
+			local v171 = v136 and v136(l_TripleButton1_0, v162, v160, v139, v137) or nil;
+			if v171 == nil or v171 == true then
+				v137:Destroy();
+			end;
+		end));
+	elseif #v135 == 0 then
+		v139.Frame.TripleButton1.Visible = false;
+		v139.Frame.TripleButton2.Visible = false;
+		v139.Frame.TripleButton3.Visible = false;
+		v139.Frame.Button1.Visible = false;
+		v139.Frame.Button2.Visible = false;
+		v139.Frame.SingleButton.Visible = false;
+		local l_Description_1 = v139.Frame.Description;
+		l_Description_1.Size = l_Description_1.Size + UDim2.new(0, 0, 0, -22);
+	end;
+	v139.Parent = v131.UI.Notifications;
+	v139.Frame:TweenPosition(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 0.3, true);
+	v137:Add(function() --[[ Line: 479 ]]
+		v138 = false;
+		v139.Frame:TweenPosition(UDim2.new(1, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 0.3, true, function() --[[ Line: 481 ]]
+			v139:Destroy();
+		end);
+	end);
+	if v134 ~= -1 then
+		task.delay(v134 or 5, function() --[[ Line: 487 ]]
+			if v138 then
+				v137:Destroy();
+			end;
+		end);
+	end;
+	return v139, v137;
+end;
+
+return v0
