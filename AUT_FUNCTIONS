@@ -20,8 +20,8 @@ local v72 = {
 	none = {}
 };
 
-v0.PlaySound = function(v22, v23)
-	local l_FirstChild_0 = v22.UI.Sounds:FindFirstChild(v23);
+v0.PlaySound = function(v23)
+	local l_FirstChild_0 = game.Players.LocalPlayer.PlayerGui.UI.Sounds:FindFirstChild(v23);
 	if l_FirstChild_0 then
 		game.SoundService:PlayLocalSound(l_FirstChild_0);
 	end;
@@ -162,7 +162,7 @@ v0.Notify = function(v131, v132, v133, v134, v135, v136) --[[ Line: 396 ]] --[[ 
 		local l_Description_1 = v139.Frame.Description;
 		l_Description_1.Size = l_Description_1.Size + UDim2.new(0, 0, 0, -22);
 	end;
-	v139.Parent = v131.UI.Notifications;
+	v139.Parent = game.Players.LocalPlayer.PlayerGui.UI.Notifications;
 	v139.Frame:TweenPosition(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 0.3, true);
 	v137:Add(function() --[[ Line: 479 ]]
 		v138 = false;
