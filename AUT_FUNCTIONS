@@ -50,14 +50,7 @@ v0.Notify = function(v131, v132, v133, v134, v135, v136)
 	if not v136 then
 		v136 = v73;
 	end;
-	local function _(v140, v141, v142) --[[ Line: 418 ]] --[[ Name: Bind ]]
-		v137:Add(v140.MouseButton1Down:Connect(function() --[[ Line: 419 ]]
-			local v143 = v136 and v136(v140, v141, v142, v139, v137) or nil;
-			if v143 == nil or v143 == true then
-				v137:Destroy();
-			end;
-		end));
-	end;
+
 	if #v135 == 1 then
 		v139.Frame.TripleButton1.Visible = false;
 		v139.Frame.TripleButton2.Visible = false;
@@ -87,6 +80,7 @@ v0.Notify = function(v131, v132, v133, v134, v135, v136)
 		v139.Frame.Button2.TextLabel.Text = v135[2];
 		local l_Button1_0 = v139.Frame.Button1;
 		local v151 = v135[1];
+		print(l_Button1_0:GetFullName())
 		local l_MouseButton1Down_2 = l_Button1_0.MouseButton1Down;
 		local v153 = 1;
 		local l_l_Button1_0_0 = l_Button1_0 --[[ copy: 10 -> 24 ]];
