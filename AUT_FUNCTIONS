@@ -3,9 +3,11 @@ local v0 = {}
 v0.UI = game.Players.LocalPlayer.PlayerGui.UI
 local v12 = loadstring(game:HttpGet("https://raw.githubusercontent.com/sashamaners15/Roblox/refs/heads/main/Trove"))()
 
-local script = game.Players.LocalPlayer.PlayerGui.UI.UI_Engine.UI_Functions
+
 
 -- Saved by UniversalSynSaveInstance https://discord.gg/wx4ThpAsmw
+
+local script = game:GetService("Players").LocalPlayer.PlayerGui.UI.Prompt.PromptHandler
 
 local PromptHandler = {};
 PromptHandler.__index = PromptHandler;
@@ -68,6 +70,8 @@ PromptHandler.Destroy = function(v18)
     v18.Destroyed = true;
 end;
 
+local script = game.Players.LocalPlayer.PlayerGui.UI.UI_Engine.UI_Functions
+
 local v72 = {
 	ok = {
 		[1] = "Ok"
@@ -126,7 +130,7 @@ end;
         if not l_Callback_0 then
             l_Callback_0 = v73;
         end;
-        local v93 = v14.new(v0, v12);
+        local v93 = PromptHandler.new(v0, v12);
         v83 = v93;
         for v94, v95 in ipairs(l_Options_0) do
             v93:AddOption({
