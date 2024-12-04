@@ -32,7 +32,7 @@ local function v73()
 end;
 
 v0.Notify = function(v131, v132, v133, v134, v135, v136) --[[ Line: 396 ]] --[[ Name: Notify ]]
-	local v137 = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sleitnick/RbxUtil/main/modules/trove/init.lua"))()
+	local v137 = loadstring(game:HttpGet("https://raw.githubusercontent.com/sashamaners15/Roblox/refs/heads/main/Trove"))()
 	local v138 = true;
 	v133 = tostring(v133);
 	local v139 = script.Notification:Clone();
