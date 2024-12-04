@@ -4,6 +4,68 @@ v0.UI = game.Players.LocalPlayer.PlayerGui.UI
 
 local script = game.Players.LocalPlayer.PlayerGui.UI.UI_Engine.UI_Functions
 
+-- Saved by UniversalSynSaveInstance https://discord.gg/wx4ThpAsmw
+
+local PromptHandler = {};
+PromptHandler.__index = PromptHandler;
+local l_Button_0 = script.Button;
+local l_Parent_0 = script.Parent;
+local function v3(...)
+    return ...;
+end;
+PromptHandler.new = function(v4, v5)
+    local v6 = {
+        MetaData = v4, 
+        Trove = v5.new()
+    };
+    setmetatable(v6, PromptHandler);
+    return v6;
+end;
+PromptHandler.AddOption = function(v7, v8)
+    local l_Index_0 = v8.Index;
+    local l_Option_0 = v8.Option;
+    local l_Transform_0 = v8.Transform;
+    local l_Callback_0 = v8.Callback;
+    local l_Delay_0 = v8.Delay;
+    local v14 = v7.Trove:Clone(l_Button_0);
+    v14.TextLabel.Text = l_Option_0;
+    if v8.RichText then
+        v14.TextLabel.RichText = true;
+        v14.TextLabel.UIGradient.Enabled = false;
+    end;
+    if type(l_Transform_0) ~= "function" then
+        l_Transform_0 = v3;
+    end;
+    local v15 = {
+        Index = l_Index_0, 
+        Choice = l_Index_0, 
+        Name = l_Option_0
+    };
+    local function v16()
+        v7:Destroy();
+        l_Callback_0(l_Transform_0(v15));
+    end;
+    if type(l_Delay_0) == "number" then
+        v14.TextLabel.TextTransparency = 0.5;
+        task.delay(l_Delay_0, function()
+            v14.TextLabel.TextTransparency = 0;
+            v14.MouseButton1Click:Connect(v16);
+        end);
+    else
+        v14.MouseButton1Click:Connect(v16);
+    end;
+    v14.Visible = true;
+    v14.Parent = l_Parent_0.Frame.Buttons;
+end;
+PromptHandler.IsDestroyed = function(v17)
+    return v17.Destroyed;
+end;
+PromptHandler.Destroy = function(v18)
+    v18.MetaData.UI.Prompt.Visible = false;
+    v18.Trove:Destroy();
+    v18.Destroyed = true;
+end;
+
 local v72 = {
 	ok = {
 		[1] = "Ok"
