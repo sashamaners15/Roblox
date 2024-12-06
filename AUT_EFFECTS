@@ -1,0 +1,45 @@
+local EFFECTS = {}
+
+function EFFECTS.D4C_Transition()
+    local l_RunService_0 = game:GetService("RunService");
+local l_TweenService_0 = game:GetService("TweenService");
+local v2 = nil;
+local function v7(_) --[[ Line: 6 ]] --[[ Name: Entrance ]]
+    if v2 ~= nil then
+        v2:Disconnect();
+    end;
+    local v4 = 0;
+    v2 = l_RunService_0.PreRender:Connect(function(v5) --[[ Line: 11 ]]
+        v4 = v4 + v5;
+        if v4 >= 1 then
+            v2:Disconnect();
+            v2 = nil;
+        end;
+        local l_l_TweenService_0_Value_0 = l_TweenService_0:GetValue(v4, Enum.EasingStyle.Back, Enum.EasingDirection.In);
+        workspace.CurrentCamera.CFrame = workspace.CurrentCamera.CFrame * CFrame.Angles(0, 0, (math.rad(l_l_TweenService_0_Value_0 * 180)));
+    end);
+end;
+
+v7(_)
+
+task.wait(0.75)
+
+local v14 = 0.75;
+local l_ColorCorrectionEffect_0 = Instance.new("ColorCorrectionEffect");
+l_ColorCorrectionEffect_0.Parent = game.Lighting;
+l_TweenService_0:Create(l_ColorCorrectionEffect_0, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut, 0, false), {
+    Brightness = -50
+}):Play();
+if v14 > 0 then
+    task.wait(v14);
+end;
+local v16 = l_TweenService_0:Create(l_ColorCorrectionEffect_0, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut, 0, false), {
+    Brightness = 0
+});
+v16:Play();
+v16.Completed:Once(function() --[[ Line: 49 ]]
+    l_ColorCorrectionEffect_0:Destroy();
+end);
+end
+
+return EFFECTS
