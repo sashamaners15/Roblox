@@ -46,11 +46,11 @@ end
 Player.CharacterAdded:Connect(onCharacterAdded)
 
 local Window = Luna:CreateWindow({
-	Name = "Prime Hub",
+	Name = "Prime Hub [Boundless Tower]",
 	Subtitle = nil,
 	LogoID = "82795327169782",
 	LoadingEnabled = true,
-	LoadingTitle = "Prime Hub",
+	LoadingTitle = "Prime Hub [Boundless Tower]",
 	LoadingSubtitle = "Initializing...",
 	ConfigSettings = {
 		RootFolder = "Prime Hub",
