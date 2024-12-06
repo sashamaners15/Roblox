@@ -59,34 +59,6 @@ local Window = Luna:CreateWindow({
 	}
 })
 
-local function SaveConfig(configName)
-    local configPath = string.format("%s/%s.json", Window.ConfigSettings.RootFolder, configName)
-    local configData = HttpService:JSONEncode(Window:GetAllSettings())
-    writefile(configPath, configData)
-    print("[Prime Hub] Конфигурация сохранена: " .. configPath)
-end
-
-local function LoadConfig(configName)
-    local configPath = string.format("%s/%s.json", Window.ConfigSettings.RootFolder, configName)
-    if isfile(configPath) then
-        local success, result = pcall(function()
-            local configData = readfile(configPath)
-            local decodedData = HttpService:JSONDecode(configData)
-            Window:LoadSettings(decodedData)
-        end)
-
-        if success then
-            print("[Prime Hub] Конфигурация успешно загружена: " .. configPath)
-        else
-            warn("[Prime Hub] Ошибка при загрузке конфигурации: " .. tostring(result))
-        end
-    else
-        warn("[Prime Hub] Конфигурация не найдена: " .. configPath)
-    end
-end
-
-LoadConfig("DefaultConfig")
-
 Window:CreateHomeTab({
 	SupportedExecutors = {},
 	DiscordInvite = "1234",
