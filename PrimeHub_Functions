@@ -1,1 +1,55 @@
+local Functions = {}
 
+local function GetService(serviceName)
+    return game:GetService(serviceName)
+end
+
+local HttpService = GetService("HttpService")
+
+if not getgenv().SETTINGS then
+    getgenv().SETTINGS = {}
+end
+
+function Functions:InitSettings(ConfigPath, FolderPath)
+    getgenv().SETTINGS.CONFIG_PATH = ConfigPath
+    getgenv().SETTINGS.FOLDER_PATH = FolderPath
+end
+
+local function SaveSettings()
+    local FolderPath = getgenv().SETTINGS.FOLDER_PATH
+    if not isfolder("Prime Hub") then
+        makefolder("Prime Hub")
+    end
+    if not isfolder(FolderPath) then
+        makefolder(FolderPath)
+    end
+    local configData = HttpService:JSONEncode(getgenv().SETTINGS)
+    writefile(getgenv().SETTINGS.CONFIG_PATH, configData)
+end
+
+function Functions:SetSetting(Setting,Value)
+    getgenv().SETTINGS[Setting] = Value
+    SaveSettings()
+end
+
+function Functions:LoadSettings()
+    if isfile(getgenv().SETTINGS.CONFIG_PATH) then
+
+        local ConfigPath = getgenv().SETTINGS.CONFIG_PATH
+
+        local success, result = pcall(function()
+            local configData = readfile(ConfigPath)
+            getgenv().SETTINGS = HttpService:JSONDecode(configData)
+        end)
+        if success then
+            print("[Prime Hub] Настройки загружены:", ConfigPath)
+        else
+            warn("[Prime Hub] Ошибка загрузки настроек:", tostring(result))
+        end
+    else
+        print("[Prime Hub] Конфигурация не найдена, используются настройки по умолчанию.")
+
+    end
+end
+
+return Functions
