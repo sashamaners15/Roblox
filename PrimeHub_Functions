@@ -6,11 +6,12 @@ end
 
 local HttpService = GetService("HttpService")
 
-if not getgenv().SETTINGS then
-    getgenv().SETTINGS = {}
-end
-
 function Functions:InitSettings(ConfigPath, FolderPath)
+
+    if not getgenv().SETTINGS then
+        getgenv().SETTINGS = {}
+    end
+
     getgenv().SETTINGS.CONFIG_PATH = ConfigPath
     getgenv().SETTINGS.FOLDER_PATH = FolderPath
 end
@@ -32,7 +33,7 @@ function Functions:AbbreviateNumber(number)
 end
 
 function Functions:GetSettingValue(Setting)
-    return getgenv().SETTINGS(Setting) or false
+    return getgenv().SETTINGS[Setting] or false
 end
 
 local function SaveSettings()
