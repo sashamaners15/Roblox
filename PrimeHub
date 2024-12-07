@@ -1,0 +1,13 @@
+repeat
+    task.wait()
+until game:IsLoaded()
+
+local IDs = {
+    ["BoundlessTower"] = 8023712967
+};
+
+if game.PlaceId == IDs.BoundlessTower then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/sashamaners15/Roblox/refs/heads/main/PrimeHub_Boundless"))()
+else
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/sashamaners15/Roblox/refs/heads/main/PrimeHub_Main"))()
+end
