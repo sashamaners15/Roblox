@@ -24,7 +24,7 @@ v7(_)
 
 task.wait(0.75)
 
-local v14 = 0.75;
+local v14 = 3;
 local l_ColorCorrectionEffect_0 = Instance.new("ColorCorrectionEffect");
 l_ColorCorrectionEffect_0.Parent = game.Lighting;
 l_TweenService_0:Create(l_ColorCorrectionEffect_0, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut, 0, false), {
