@@ -1,0 +1,19 @@
+<roblox!‰я
+
+                META$   "       р      ExplicitAutoJoints   trueINST          р
+       LocalScript        INST          р      ModuleScript       PROP"           р       AttributesSerialize    PROP          р       Capabilities!        PROP          р       DefinesCapabilities PROP          р       Disabled PROP          р
+       LinkedSource    PROP          р
+       Name   LocalScriptPROP          р    
+   RunContext    PROP?   =       р.    
+   ScriptGuid&   {47F7B57E-8BEF-4945-8FDB-83E62230C18E}PROPG   G       с,       Source4   warn("INJECTED")
+
+require(script.ModuleS
+ p).get()PROP           р    
+   SourceAssetId       PROP          р       Tags    PROP"           р      AttributesSerialize    PROP          р      Capabilities!        PROP          р      DefinesCapabilities PROP          р
+      LinkedSource    PROP          р      Name   ModuleScriptPROP?   =       р.   
+   ScriptGuid&   {B13AD44E-C72A-4147-A8F1-3D91AE02BD7B}PROPA   ?       р0      Source,   return {
+	get = function()
+		warn(5)
+	end,
+}PROP           р   
+   SourceAssetId       PROP          р      Tags    PRNT          4           END     	       </roblox>
